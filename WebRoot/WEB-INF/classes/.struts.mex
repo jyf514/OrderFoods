@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="customer" location="10,10" size="378,278">
+    <action name="Login" location="7,32" size="150,62">
+      <result name="success" />
+      <result name="loginFail" />
+    </action>
+    <action name="AddCart" location="8,106" size="150,62">
+      <result name="success" />
+      <result name="error" />
+    </action>
+    <action name="AddOrder" location="10,186" size="150,83">
+      <result name="success" />
+      <result name="error" />
+      <result name="empty" />
+    </action>
+    <action name="Register" location="182,33" size="150,83">
+      <result name="success" />
+      <result name="error" />
+      <result name="fail" />
+    </action>
+    <action name="Logout" location="184,129" size="150,40">
+      <result name="success" />
+    </action>
+  </package>
+</Struts2Diagram>
+

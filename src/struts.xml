@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="customer" namespace="/customer" extends="struts-default">
+		<action name="Login"
+			class="com.orderFoods.action.customer.LoginAction">
+		
+		<result name="success"></result>
+		<result name="loginFail"></result></action>
+		<action name="AddCart"
+			class="com.orderFoods.action.customer.AddCartAction">
+		<result name="success"></result>
+		<result name="error"></result></action>
+		<action name="AddOrder"
+			class="com.orderFoods.action.customer.AddOrderAction">
+		<result name="success"></result>
+		<result name="error"></result>
+		<result name="empty"></result></action>
+		<action name="Register"
+			class="com.orderFoods.action.customer.RegisterAction">
+		<result name="success"></result>
+		<result name="error"></result>
+		<result name="fail"></result></action>
+		<action name="Logout"
+			class="com.orderFoods.action.customer.LogoutAction">
+		<result name="success"></result></action></package>
+	</struts>    
