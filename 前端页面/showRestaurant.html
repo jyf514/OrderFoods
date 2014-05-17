@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap In Practice - Landing Page Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<style type="text/css">
+    <!--
+		body{
+		background-image:url(images/bg.jpg);
+		background-repeat:no-repeat;
+		background-attachment:fixed;
+		background-position:center ;} 
+    -->
+    </style>
+</head>
+<body>
+	<div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Jiaole.me</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">我的饿单</a></li>
+            <li><a href="#">菜篮子</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">当前用户名<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+              	<li><a href="#">登陆</a><a href="#">注册</a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">我的地址</a></li>
+                <li><a href="#">账户设置</a></li>
+                <li><a href="#">注销</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="搜索美食" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">搜索</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    
+    <div class="container">
+    	<p>此处为当前地址<a href="#">【切换】</a></p>
+       <div class="jumbotron">
+        <h1>
+          Jiaole.me
+        </h1>
+        <p>
+        "叫了么“是中国最大的餐饮O2O平台。公司创立于2014年5月，起源于集美大学。业务主要覆盖全国12个城市。加盟餐厅数共计20000余家，2014年完成在线交易规模达到6亿元。
+        </p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="aboutus.html">了解我们</a>
+        </p>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            当前餐厅
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+          <!--
+          	以下部分为餐厅列表的迭代 
+          -->
+            <div class="col-md-3">
+              <table class="table table-hover">
+                <tbody>
+                  <tr>
+                    <td>
+                      <h4 align="center">
+                        <a href="#">此处为餐厅名</a>
+                      </h4>
+                      <ul>
+                      	<li>餐厅类型</li>
+                        <li>是否营业</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--
+            	餐厅列表结束
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
