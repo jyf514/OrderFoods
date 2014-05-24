@@ -6,8 +6,10 @@ import org.apache.struts2.ServletActionContext;
 
 
 import com.orderFoods.DAO.CustomerDAO;
+import com.orderFoods.DAO.DishDAO;
 import com.orderFoods.bean.Cart;
 import com.orderFoods.bean.Customer;
+import com.orderFoods.bean.Dish;
 import com.orderFoods.service.CustomerService;
 import com.orderFoods.util.DAOUtil;
 import com.orderFoods.util.SessionUtil;
@@ -45,6 +47,24 @@ public class CustomerServiceImpl implements CustomerService {
 		 * 
 		 * 将代码段包裹在try/catch中，catch到异常返回false
 		 */
+		CustomerService customerService=new CustomerServiceImpl();
+		if (!customerService.haveCart()) {
+			customerService.initialiseCart();
+		}
+		else{
+			DishDAO dishdao = (DishDAO)DAOUtil.getDAO("DishDAO");
+			Dish dish = dishdao.findById(dishId);
+		}
+		Cart cart=customerService.getCart();
+		if (cart.getCart().isEmpty()) {
+			
+		}
+		else {
+			
+		}
+		if (!customerService.addOrder(cart)) {
+			
+		}
 		return false;
 	}
 
@@ -61,6 +81,13 @@ public class CustomerServiceImpl implements CustomerService {
 		 * 	否：初始化cart
 		 * 是：拿到cart返回
 		 */
+		CustomerService customerService=new CustomerServiceImpl();
+		if (!customerService.haveCart()) {
+			customerService.initialiseCart();
+		}
+		else{
+			
+		}
 		return null;
 	}
 
@@ -74,6 +101,7 @@ public class CustomerServiceImpl implements CustomerService {
 		 * 返回true
 		 * 捕获到异常返回false
 		 */
+		
 		return false;
 	}
 
